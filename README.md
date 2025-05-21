@@ -225,14 +225,9 @@ superplato/
 
 ## License
 
-This repository was not originally intended for public release.  
-It was developed as a personal automation tool to streamline daily academic workflows.
-
-Following an unexpected institutional interest, 
-the project is now shared for research and educational purposes only.
-
-You may not reuse, redistribute, or commercialize any part of this project  
-without explicit written permission from the original author.
+This project is licensed under the **MIT License** —  
+feel free to use, modify, and distribute it, but **without any warranty**.  
+See the [LICENSE](./LICENSE) file for full details.
 
 ---
 
