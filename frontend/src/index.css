@@ -1,0 +1,18 @@
+/* 최소 리셋만 남기고 나머지 제거 */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+/* 나머지 스타일은 src/styles/style.css에서 관리 */

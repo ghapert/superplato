@@ -1,0 +1,1077 @@
+/* Reset & Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Pretendard', 'Apple SD Gothic Neo', Arial, sans-serif;
+  background: #fafdff;
+  color: #2c3e50;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.15s;
+  font-weight: 500;
+}
+a:hover {
+  color: #888;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #444;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  letter-spacing: -1px;
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.15em; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ededed;
+  padding: 10px 14px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+input:focus, textarea:focus, select:focus {
+  border: 1.5px solid #222;
+  box-shadow: 0 0 0 2px #ededed;
+}
+
+label {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  display: block;
+}
+
+button, .button {
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.4em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px #ededed;
+  outline: none;
+  margin: 0;
+  display: inline-block;
+}
+button:hover, .button:hover {
+  background: #888;
+}
+button:disabled, .button:disabled {
+  background: #bbb;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.card, .container-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(34,34,34,0.08);
+  border: 1.5px solid #ededed;
+  padding: 32px 40px;
+  margin: 32px auto;
+  max-width: 900px;
+}
+
+.navbar {
+  background: transparent;
+  padding: 1.1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* 좌우 배치 */
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px #ededed;
+}
+
+.navbar-menu-icon {
+  margin-right: auto;
+  font-size: 26px;
+  padding-left: 24px;
+  cursor: pointer;
+  color: inherit;
+  user-select: none;
+  line-height: 1;
+  position: relative;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  min-width: 170px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 32px rgba(34,34,34,0.10), 0 1.5px 8px #ededed;
+  border: 1.5px solid #ededed;
+  z-index: 100;
+  animation: fadeInUp 0.22s cubic-bezier(.4,0,.2,1);
+  overflow: hidden;
+  padding: 10px 0 10px 0; /* 위아래 여백 증가 */
+}
+.navbar-dropdown .navbar-link {
+  color: #444;
+  font-weight: 700;
+  font-size: 0.98em;
+  letter-spacing: -0.5px;
+  transition: background 0.13s, color 0.13s;
+  border-radius: 0;
+  text-align: left;
+  white-space: nowrap;
+  padding: 12px 28px;
+}
+.navbar-dropdown .navbar-link:hover {
+  background: #f7f7f7;
+  color: #888;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-left: 0;
+}
+
+.navbar a, .navbar-link {
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.08em;
+  letter-spacing: -0.5px;
+  transition: color 0.15s;
+}
+.navbar a:hover, .navbar-link:hover {
+  color: #888;
+}
+
+.footer {
+  background: #444;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1em;
+  margin-top: 48px;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 -2px 12px #ededed;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 24px 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(52,152,219,0.04);
+}
+.table th, .table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ededed;
+  text-align: left;
+}
+.table th {
+  background: #f7f7f7;
+  color: #222;
+  font-weight: 700;
+  border-bottom: 2px solid #ededed;
+}
+.table tr:nth-child(even) {
+  background: #fafafa;
+}
+.table tr:hover {
+  background: #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.map, .kakao-map {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+  border-radius: 14px;
+  border: 1.5px solid #eaf2fa;
+  box-shadow: 0 2px 8px #eaf2fa;
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 100%; /* input 바로 아래에 붙음 */
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #eee;
+  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #eaf2fa;
+  margin-top: 4px;
+  min-width: 120px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.suggestion-list > div {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  background: #f9fafe;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.suggestion-list > div:last-child {
+  border-bottom: none;
+}
+.suggestion-list > div:hover {
+  background: #eaf6ff;
+}
+
+.lecture-block {
+  background: #f9fafe;
+  border: 1px solid #d8e0f0;
+  padding: 20px 24px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px #eaf2fa;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.lecture-block:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 4px 16px #eaf2fa;
+}
+
+.page-bg {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f7f7;
+  padding: 48px 0;
+}
+
+.home-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(52,152,219,0.10);
+  border: 1.5px solid #eaf2fa;
+  min-width: 0;
+}
+
+.home-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #444;
+  letter-spacing: -1px;
+}
+
+.home-welcome {
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+.next-lecture-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px #eaf2fa;
+  border: 1px solid #eaf2fa;
+}
+.next-lecture-title {
+  margin: 0;
+  color: #444;
+  font-weight: 700;
+}
+.next-lecture-name {
+  font-weight: 600;
+  margin: 8px 0;
+}
+.next-lecture-time {
+  color: #888;
+  margin-bottom: 6px;
+}
+.next-lecture-countdown {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.no-lecture-msg {
+  color: #888;
+  margin-bottom: 18px;
+}
+
+.attendance-form-wrapper {
+  margin-top: 18px;
+}
+
+.attendance-status-msg {
+  padding: 18px;
+  background: #f8f8fa;
+  border-radius: 10px;
+  text-align: center;
+  color: #888;
+  font-weight: 600;
+}
+
+.attendance-form-desc {
+  font-size: 0.97em;
+  margin: 6px 0 10px 2px;
+  transition: color 0.2s;
+}
+.attendance-form-desc.success {
+  color: #444;
+}
+.attendance-form-desc.error {
+  color: #e74c3c;
+}
+.attendance-form-desc.neutral {
+  color: #888;
+}
+
+.login-required-card {
+  text-align: center;
+  margin-top: 40px;
+  background: #f4f8fb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px #eaf2fa;
+}
+.login-required-msg {
+  color: #888;
+  margin-bottom: 18px;
+}
+.login-btn {
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ededed;
+  transition: background 0.15s;
+}
+.login-btn:hover {
+  background: #888;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #fafdff;
+}
+::-webkit-scrollbar-thumb {
+  background: #eaf2fa;
+  border-radius: 8px;
+}
+
+/* AllLectures */
+.all-lectures-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(52,152,219,0.10);
+  border: 1.5px solid #eaf2fa;
+  min-width: 0;
+}
+.all-lectures-title {
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #444;
+  letter-spacing: -1px;
+}
+.all-lectures-loading,
+.all-lectures-error {
+  text-align: center;
+  color: #888;
+}
+.all-lectures-error {
+  color: #e74c3c;
+}
+.all-lectures-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px solid #eaf2fa;
+  background: #fcfdff;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.04);
+  padding: 0;
+  max-height: 520px;
+  min-height: 180px;
+}
+
+/* 검색창 스타일 */
+.all-lectures-search {
+  width: 100%;
+  max-width: 340px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #dbeafe;
+  font-size: 16px;
+  background: #fafdff;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.18s, box-shadow 0.18s;
+}
+.all-lectures-search:focus {
+  border: 1.5px solid #3498db;
+  box-shadow: 0 0 0 2px #eaf6ff;
+}
+
+/* Attendance */
+.attendance-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(52,152,219,0.10);
+  border: 1.5px solid #eaf2fa;
+  min-width: 0;
+}
+.attendance-title {
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #444;
+  letter-spacing: -1px;
+}
+.attendance-loading {
+  text-align: center;
+  color: #888;
+}
+.attendance-error {
+  text-align: center;
+  color: #e74c3c;
+}
+
+/* AttendanceDetail */
+.attendance-detail-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(52,152,219,0.10);
+  border: 1.5px solid #eaf2fa;
+  min-width: 0;
+}
+.attendance-detail-summary {
+  margin-bottom: 32px;
+}
+.attendance-detail-summary-title {
+  font-weight: 800;
+  color: #444;
+  margin-bottom: 8px;
+}
+.attendance-detail-lecture-name {
+  font-size: 0.8em;
+  color: #444;
+}
+.attendance-detail-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+.attendance-detail-summary-item {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+}
+.attendance-detail-summary-label {
+  color: #888;
+  font-weight: 600;
+}
+.attendance-detail-summary-value {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.attendance-detail-records-title {
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 12px;
+}
+.attendance-detail-records-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  background: #f8f8fa;
+  box-shadow: 0 1px 4px #eaf2fa;
+}
+.attendance-detail-records-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  border-bottom: 1px solid #eaf2fa;
+}
+.attendance-detail-records-item:last-child {
+  border-bottom: none;
+}
+.attendance-detail-records-date {
+  color: #2c3e50;
+  font-weight: 600;
+}
+.attendance-detail-records-status {
+  color: #3498db;
+  font-weight: 700;
+}
+.attendance-detail-records-status span {
+  color: #2c3e50;
+}
+
+/* ManageLectures */
+.manage-lectures-bg {
+  padding: 64px 0 48px 0;
+}
+.manage-lectures-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 18px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(52,152,219,0.10);
+  border: 1.5px solid #eaf2fa;
+  display: flex;
+  gap: 32px;
+  min-height: 700px;
+  height: 820px;
+  align-items: stretch;
+}
+.manage-lectures-left {
+  flex: 0 0 60%;
+  min-width: 320px;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+  justify-content: flex-start;
+}
+.manage-lectures-right {
+  flex: 0 0 35%;
+  min-width: 260px;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.manage-lectures-list-wrapper {
+  flex: 1 1 0;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-bottom: 18px;
+  max-height: calc(100% - 70px);
+  min-height: 200px;
+}
+.manage-lectures-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.manage-lectures-map-wrapper {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  min-height: 200px; /* 오른쪽과 동일하게 */
+  max-height: calc(100% - 70px); /* 오른쪽과 동일하게 */
+  height: auto;
+}
+
+.map, .kakao-map, .manage-lectures-map-wrapper > div > div {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: 100% !important;           /* 부모 래퍼 높이만큼 */
+  min-height: 500px !important;      /* 최소 높이 충분히 크게 (원하는 값으로 조정) */
+  max-height: 100% !important;
+  border-radius: 14px;
+  border: 1.5px solid #eaf2fa;
+  box-shadow: 0 2px 8px #eaf2fa;
+  margin: 0 auto;
+  background: #fafdff;
+  aspect-ratio: unset;
+}
+
+.searchbar-suggestion-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.searchbar-suggestion-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+  background: #fafdff;
+  font-size: 1em;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.suggestion-list-item {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  background: #f9fafe;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.suggestion-list-item:last-child {
+  border-bottom: none;
+}
+.suggestion-list-item:hover {
+  background: #eaf6ff;
+}
+
+.attendance-form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 0;
+}
+.attendance-form-input {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.attendance-form-btn {
+  flex-shrink: 0;
+  min-width: 90px;
+  height: 42px;
+  margin: 0;
+}
+
+.attendance-form {
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.attendance-form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.attendance-form-input {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 42px;
+  font-size: 1.08em;
+}
+
+.attendance-form-btn {
+  flex-shrink: 0;
+  min-width: 90px;
+  height: 42px;
+  margin: 0;
+  font-size: 1.08em;
+}
+
+.attendance-form-helper {
+  margin: 4px 0 12px 2px;
+  font-size: 0.97em;
+}
+.attendance-form-helper-link {
+  color: #3498db;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.attendance-form-msg {
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.04em;
+}
+.attendance-form-msg.success {
+  color: #444;
+}
+.attendance-form-msg.error {
+  color: #e74c3c;
+}
+
+.account-edit-card {
+  max-width: 420px;
+  margin: 64px auto;
+  padding: 32px 28px 28px 28px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(52,152,219,0.10);
+  border: 1.5px solid #eaf2fa;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.account-edit-title {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 0;
+  color: #444;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.account-edit-form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-edit-form-inner {
+  width: 100%;
+  max-width: 340px;
+  min-width: 0;
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+/* AccountForm */
+.account-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.account-form .input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+  background: #fafdff;
+  font-size: 1em;
+  margin-top: 6px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.account-form .input:focus {
+  border: 1.5px solid #3498db;
+  box-shadow: 0 0 0 2px #eaf6ff;
+}
+
+.account-form .form-group {
+  margin-bottom: 18px;
+}
+
+.account-form .form-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.account-form .edit-btn,
+.account-form .save-btn {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.08em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.account-form .edit-btn {
+  background: #444;
+  color: #fff;
+}
+.account-form .edit-btn:hover {
+  background: #888;
+}
+.account-form .save-btn {
+  background: #27ae60;
+  color: #fff;
+}
+
+.account-form-bottom-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.account-form .logout-btn {
+  background: #888;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.account-form .delete-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.building-btn-group-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 44px;
+  max-height: 80px;
+  overflow-x: auto;
+  overflow-y: visible;
+  /* 버튼 그룹이 너무 커지면 스크롤이 생기도록 */
+  padding-bottom: 2px;
+}
+
+.building-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  max-height: 70px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* 한 줄에 너무 많으면 자동 줄바꿈, 세로 스크롤 */
+}
+
+.building-btn {
+  margin: 0;
+  padding: 7px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.98em;
+  box-shadow: 0 2px 6px #ededed;
+  transition: background 0.2s;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.building-btn:hover {
+  background-color: #888;
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+  .account-edit-card {
+    max-width: 98vw;
+    padding: 18px 4vw 18px 4vw;
+    border-radius: 12px;
+  }
+  .account-edit-form-inner {
+    max-width: 98vw;
+    padding: 0;
+  }
+  .account-form .input {
+    font-size: 1em;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card, .container-card {
+    padding: 18px 8px;
+    max-width: 98vw;
+  }
+  .navbar {
+    font-size: 0.98em;
+    padding: 0.7rem 0;
+  }
+  .manage-lectures-card {
+    flex-direction: column;
+    max-width: 98vw;
+    height: auto;
+    min-height: 0;
+    padding: 16px 2vw;
+    gap: 18px;
+  }
+  .manage-lectures-left,
+  .manage-lectures-right {
+    max-width: 100vw;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+  .manage-lectures-list-wrapper {
+    max-height: 320px;
+  }
+  .building-btn-group-wrapper {
+    max-height: 100px;
+  }
+  .building-btn-group {
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card, .container-card {
+    padding: 10px 2vw;
+    margin: 12px 0;
+    border-radius: 10px;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .footer {
+    font-size: 0.95em;
+    padding: 0.7rem 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .manage-lectures-card {
+    flex-direction: column;
+    padding: 8px 0;
+    gap: 10px;
+  }
+  .manage-lectures-left,
+  .manage-lectures-right {
+    max-width: 100vw;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+  .building-btn-group-wrapper {
+    max-height: 120px;
+  }
+  .building-btn-group {
+    max-height: 110px;
+  }
+}
+
+/* 카드, 지도, 강의 블록 등 공통 부드러운 등장 효과 */
+.card, .container-card, .home-card, .next-lecture-card, .lecture-block, .manage-lectures-card, .attendance-card, .attendance-detail-card {
+  transition: box-shadow 0.25s cubic-bezier(.4,0,.2,1), transform 0.25s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+  will-change: box-shadow, transform, opacity;
+}
+
+/* 내부 카드/블록에만 hover 효과 적용 */
+.next-lecture-card:hover,
+.lecture-block:hover {
+  box-shadow: 0 8px 32px rgba(52,152,219,0.18), 0 1.5px 8px #eaf2fa;
+  transform: translateY(-2px) scale(1.015);
+  opacity: 0.98;
+}
+
+/* .card, .container-card, .home-card, .attendance-card, .attendance-detail-card, .manage-lectures-card 등은 hover 효과 없음 */
+
+/* 버튼 부드러운 효과 */
+.button, button {
+  transition: background 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s, transform 0.18s;
+  will-change: background, box-shadow, transform;
+}
+.button:active, button:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 4px #eaf2fa;
+}
+
+/* 서치바 입력창 focus 효과 */
+.searchbar-suggestion-input {
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.searchbar-suggestion-input:focus {
+  background: #f4f8fb;
+  box-shadow: 0 0 0 3px #eaf6ff;
+}
+
+/* 추천 리스트 등장 애니메이션 */
+.suggestion-list {
+  animation: fadeInUp 0.22s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 지도 컨테이너 부드러운 그림자와 등장 효과 */
+.map, .kakao-map, .manage-lectures-map-wrapper > div > div {
+  transition: box-shadow 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+  will-change: box-shadow, transform, opacity;
+}
+.map:focus-within, .kakao-map:focus-within {
+  box-shadow: 0 8px 32px rgba(52,152,219,0.18), 0 1.5px 8px #eaf2fa;
+  opacity: 0.98;
+}
+
+/* 강의 블록 등장 페이드 효과 */
+.lecture-block {
+  animation: fadeInCard 0.35s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

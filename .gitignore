@@ -1,0 +1,28 @@
+# === Python (백엔드용) ===
+__pycache__/
+*.py[cod]
+backend/venv/
+backend/.env
+backend/.env.*
+backend/cookies/
+backend/logs/
+backend/*.log
+backend/*.sqlite3
+backend/credentials/
+backend/config/secrets/
+backend/config/credentials/
+
+# === Node (프론트엔드용) ===
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.*
+frontend/.vitepress/
+frontend/.next/
+
+# === 공통 ===
+*.log
+*.DS_Store
+.vscode/
+.idea/backend/runners/runner_*.py
