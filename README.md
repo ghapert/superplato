@@ -241,8 +241,13 @@ Jeong Yonhui (@ghapert)
 
 ## Contributions
 
-External contributions are currently disabled.  
-However, suggestions, feature ideas, or feedback from fellow PNU students are warmly welcomed.  
-Feel free to open an issue to start a discussion.
+External contributions are open and encouraged!
+
+If you’re a fellow developer, designer, or just someone who loves building better student tools —
+pull requests, feature suggestions, and UI redesign ideas are all welcome.
+
+I’m especially looking for help improving the frontend design 🙏
+
+Feel free to open an issue, fork the project, or just dive in and start creating.
 
 ---
