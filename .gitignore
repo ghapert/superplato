@@ -1,14 +1,19 @@
 # === Python (백엔드용) ===
 __pycache__/
 *.py[cod]
+*.sqlite*
 backend/venv/
+
+# Ignore only the actual secret env file
 backend/.env
-backend/.env.*
+!backend/.env.example
+
+# Ignore secrets & runtime files
 backend/cookies/
 backend/logs/
 backend/*.log
-backend/*.sqlite3
-backend/credentials/
+backend/credentials/firebase-service-account.json
+!backend/credentials/firebase-service-account.json.example
 backend/config/secrets/
 backend/config/credentials/
 
@@ -16,13 +21,15 @@ backend/config/credentials/
 frontend/node_modules/
 frontend/dist/
 frontend/build/
+
 frontend/.env
-frontend/.env.*
+!frontend/.env.example
+
 frontend/.vitepress/
-frontend/.next/
+# frontend/.next/ ← Only if using Next.js
 
 # === 공통 ===
 *.log
 *.DS_Store
 .vscode/
-.idea/backend/runners/runner_*.py
+.idea/
