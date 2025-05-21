@@ -212,7 +212,7 @@ superplato/
 
 ---
 
-## Security Guidelines
+## Cautions
 
 - ⚠️ Never commit the following:
   - `.env`
@@ -220,6 +220,7 @@ superplato/
   - Any cookie/session storage files
 - Temporary runner logs and cookies are excluded via .gitignore
 - Future versions will implement encrypted secret storage for greater safety
+- **Important:** The "bruteforce" attendance feature (which attempts all possible attendance codes automatically) may be legally or ethically controversial depending on your institution's policy. **Use of this feature is discouraged and at your own risk.**
 
 ---
 
